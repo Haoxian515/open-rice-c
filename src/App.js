@@ -146,6 +146,7 @@ function mapStateToProps(reduxState){
     explores_ids: reduxState.explores_ids,
     mainVenues: reduxState.mainVenues,
     exploreVenues: reduxState.exploreVenues
+
   }
 }
 

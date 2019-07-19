@@ -84,7 +84,7 @@ class InputFormArea extends Component{
     callAPI() {
         // alert("input form " + this.state.inputValue)
         // e.preventDefault()
-        axios.get(this.props.ROOTROUTE + "/api/search_restaurants", {   
+        axios.get("https://open-rice-api.herokuapp.com/api/search_restaurants", {   
             params: {
                 "input": this.state.inputValue,
                 "queryArea": this.state.searchArea
@@ -156,8 +156,7 @@ function mapStateToProps(reduxState){
     return {
         // venue_ids: reduxState.venue_ids,
         inputValue: reduxState.inputKey,
-        redirect: reduxState.redirecState,
-        ROOTROUTE: reduxState.ROOTROUTE
+        redirect: reduxState.redirecState
     }
   }
 
