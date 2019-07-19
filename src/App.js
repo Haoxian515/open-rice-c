@@ -33,11 +33,6 @@ class App extends Component {
   constructor(props){
     super(props)
 
-    console.log(process.env.REACT_APP_TEST)
-    console.log(process.env.TEST)
-    console.log(process.env.REACT_APP_HELLO)
-
-
     console.log("ENV VARIABLE")
     this.state = ({
       text: "FROM APP.JS",
@@ -56,7 +51,7 @@ class App extends Component {
 
   getFive = async() => {
 
-    fetch("https://open-rice-api.herokuapp.com/api/getMain")
+    fetch(this.props.ROOTROUTE + "/api/getMain")
       .then(response => response.json())
       .then(venues => {
         this.props.getMainVenues(venues)
@@ -64,7 +59,7 @@ class App extends Component {
   };
 
   getExplore = async() => {
-    fetch("https://open-rice-api.herokuapp.com/api/explore")
+    fetch(this.props.ROOTROUTE + "/api/explore")
       .then(response => response.json())
       .then(venues => {
         this.props.getExploreVenues(venues)
