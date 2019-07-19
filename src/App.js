@@ -53,8 +53,9 @@ class App extends Component {
     this.getExplore()
 
   }
-  rootRoute = process.env.ROOTROUTE;
+
   getFive = async() => {
+    rootRoute = process.env.ROOTROUTE;
     fetch(rootRoute + "/api/getMain")
       .then(response => response.json())
       .then(venues => {
@@ -63,6 +64,7 @@ class App extends Component {
   };
 
   getExplore = async() => {
+    rootRoute = process.env.ROOTROUTE;
     fetch(rootRoute + "/api/explore")
       .then(response => response.json())
       .then(venues => {
@@ -74,6 +76,7 @@ class App extends Component {
 
 
   componentDidMount() {
+    
     console.log("Component did mount")
     console.log(this.state.mainVenues)
   }
