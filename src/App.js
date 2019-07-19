@@ -56,7 +56,7 @@ class App extends Component {
 
   getFive = async() => {
 
-    fetch(process.env.REACT_APP_ROOT_ROUTE + "/api/getMain")
+    fetch("https://open-rice-api.herokuapp.com/api/getMain")
       .then(response => response.json())
       .then(venues => {
         this.props.getMainVenues(venues)
@@ -64,7 +64,7 @@ class App extends Component {
   };
 
   getExplore = async() => {
-    fetch(process.env.REACT_APP_ROOT_ROUTE + "/api/explore")
+    fetch("https://open-rice-api.herokuapp.com/api/explore")
       .then(response => response.json())
       .then(venues => {
         this.props.getExploreVenues(venues)
