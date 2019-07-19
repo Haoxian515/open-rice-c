@@ -156,7 +156,8 @@ function mapStateToProps(reduxState){
     return {
         // venue_ids: reduxState.venue_ids,
         inputValue: reduxState.inputKey,
-        redirect: reduxState.redirecState
+        redirect: reduxState.redirecState,
+        ROOTROUTE: reduxState.ROOTROUTE
     }
   }
 
