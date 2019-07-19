@@ -56,7 +56,7 @@ class App extends Component {
 
   getFive = async() => {
 
-    fetch(process.env.ROOTROUTE + "/api/getMain")
+    fetch(process.env.REACT_APP_ROOT_ROUTE + "/api/getMain")
       .then(response => response.json())
       .then(venues => {
         this.props.getMainVenues(venues)
@@ -64,7 +64,7 @@ class App extends Component {
   };
 
   getExplore = async() => {
-    fetch(process.env.ROOTROUTE + "/api/explore")
+    fetch(process.env.REACT_APP_ROOT_ROUTE + "/api/explore")
       .then(response => response.json())
       .then(venues => {
         this.props.getExploreVenues(venues)
